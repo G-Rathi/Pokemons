@@ -9,42 +9,21 @@ import '../styles/PokemonDetails.css'
 const PokemonDetails = () => {
     const [pokemonDetail, setPokemonDetail] = useState([])
     const [pokemonImage, setPokemonImage] = useState('')
-    // const [pokemonTypes, setPokemonTypes] = useState([])
-    // const [pokemonWeaknesses, setPokemonWeaknesses] = useState([])
-    // const [pokemonAbilities, setPokemonAbilities] = useState([])
-    // const [pokemonAttacks, setPokemonAttacks] = useState([])
     const { id } = useParams()
-
-
 
 
     const getData = async () => {
         const response = await axios.get(`https://api.pokemontcg.io/v2/cards/${id}`)
         const pokemonData = await response.data.data
         const pokemonImageLink = await pokemonData.images.large
-        // const pokemontypes = await pokemonData.types
-        // const pokemonweaknesses = await pokemonData.weaknesses
-        // const pokemonabilities = await pokemonData.abilities
-        // const pokemonattacks = await pokemonData.attacks
-
-        // console.log('types :', pokemontypes)
-        // console.log('weaknesses :', pokemonweaknesses)
-        // console.log('Abilities :', pokemonabilities)
-        // console.log('Attacks :', pokemonattacks)
 
         setPokemonDetail(pokemonData)
         setPokemonImage(pokemonImageLink)
-        // setPokemonTypes(pokemontypes)
-        // setPokemonWeaknesses(pokemonweaknesses)
-        // setPokemonAbilities(pokemonabilities)
-        // setPokemonAttacks(pokemonattacks)
     }
 
     useEffect(() => {
         getData()
     }, [])
-
-
 
 
     return (
