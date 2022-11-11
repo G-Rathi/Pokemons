@@ -1,0 +1,17 @@
+
+.main_Container{
+    width: 60rem;
+    margin: auto;
+    color: #fff;
+    background-color: rgb(21,28,43);
+    padding: 50px 25px;
+  }
+
+.allPokemonContainer{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px 40px;
+}
+  
+

@@ -1,0 +1,22 @@
+.ability_detail_Container{
+    position: absolute;
+    width:25rem;
+    height: 12rem;
+    border: 2px solid greenyellow;
+    border-radius: 8px;
+    background-color: rgb(243, 236, 236);
+    color: black;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.abilityName{
+    color: blue;
+    margin-bottom: 5px;
+    font-size: large;
+}
+
+.abilityText{
+    color: rgb(37, 13, 13);
+    font-size: small;
+}

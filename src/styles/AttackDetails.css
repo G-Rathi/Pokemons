@@ -1,0 +1,43 @@
+
+.attack_detail_Container{
+    position: absolute;
+    left: 0;
+    width:25rem;
+    height: 15em;
+    border: 2px solid greenyellow;
+    border-radius: 8px;
+    background-color: rgb(243, 236, 236);
+    color: black;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.attackName{
+    color: blue;
+    margin-bottom: 5px;
+    font-size: large;
+}
+
+.attackDamage{
+    color: rgb(84, 120, 52);
+    margin-bottom: 5px;
+}
+
+.attackCost{
+    margin: 10px 0px;
+}
+
+.cost{
+    border: 1px solid brown;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    margin: 0px 2px;
+    color: black;
+}
+
+.attackText{
+    color: rgb(0, 0, 0);
+    font-size: small;
+    
+}
