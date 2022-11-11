@@ -14,12 +14,6 @@ const Navbar = () => {
                 <span>Shows</span>
                 <span>Series</span>
             </div>
-            <div className='navIcons'>
-                <span><i className="fa-regular fa-user" /></span>
-                <span><i className="fa-regular fa-heart" /></span>
-                <span><i className="fa-solid fa-cart-shopping" /></span>
-            </div>
-
         </div >
     )
 }
