@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import '../styles/AttackDetails.css'
 
 const AttackDetails = (props) => {
@@ -12,7 +12,7 @@ const AttackDetails = (props) => {
     }
 
     return (
-        <>
+        <Fragment>
             <button onClick={handleAttackDetail} className="btn btn-success btn-sm me-2 attackBtn">
                 {attack.name}</button>
             {attackDetail ?
@@ -32,8 +32,7 @@ const AttackDetails = (props) => {
                             })} </div> : ''}
                     <div className='attackText'>{attack.text}</div>
                 </div> : ''}
-
-        </>
+        </Fragment>
     )
 }
 
