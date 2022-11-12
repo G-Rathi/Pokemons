@@ -13,7 +13,7 @@ const AttackDetails = (props) => {
 
     return (
         <>
-            <button onClick={handleAttackDetail} className="btn btn-success btn-sm me-2">
+            <button onClick={handleAttackDetail} className="btn btn-success btn-sm me-2 attackBtn">
                 {attack.name}</button>
             {attackDetail ?
                 <div className='attack_detail_Container'>

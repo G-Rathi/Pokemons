@@ -1,4 +1,6 @@
-
+.attackBtn{
+    border: 1px solid wheat;
+}
 .attack_detail_Container{
     position: absolute;
     left: 0;
