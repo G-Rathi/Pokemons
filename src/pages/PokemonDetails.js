@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import AbilitiesDetails from '../components/AbilitiesDetails'
 import AttackDetails from '../components/AttackDetails'
 import '../styles/PokemonDetails.css'
@@ -10,6 +10,7 @@ const PokemonDetails = () => {
     const [pokemonDetail, setPokemonDetail] = useState([])
     const [pokemonImage, setPokemonImage] = useState('')
     const { id } = useParams()
+    const navigate = useNavigate()
 
 
     const getData = async () => {
@@ -25,6 +26,10 @@ const PokemonDetails = () => {
         getData()
     }, [])
 
+    const handleBack = (e) => {
+        e.preventDefault()
+        navigate(-1)
+    }
 
     return (
         <div className='details_Container'>
@@ -93,6 +98,7 @@ const PokemonDetails = () => {
                             })}
                         </div>
                     </div> : ''}
+                <button onClick={handleBack} type="button" class="btn btn-outline-danger backBtn">Back</button>
             </div>
             <img src={pokemonImage} alt={pokemonDetail.name} className='pokemonLargeImage' />
         </div>

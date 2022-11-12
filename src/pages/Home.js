@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { Fragment, useEffect, useState } from 'react'
 import PokemonCard from '../components/PokemonCard'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 import '../styles/Home.css'
 import PokemonDetails from './PokemonDetails'
 import Pagination from '../components/Pagination'
@@ -11,14 +11,14 @@ import Pagination from '../components/Pagination'
 
 const Home = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <div className='main_Container'>
                 <Routes>
                     <Route path='/' element={<AllPokemons />} />
                     <Route path='/pokemon/:id' element={<PokemonDetails />} />
                 </Routes>
             </div>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
