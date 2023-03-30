@@ -66,7 +66,7 @@ export const AllPokemons = () => {
         <Fragment>
             <div className='allPokemonContainer'>
                 {loading?<Loader />:
-                    pokemons.slice(pagination.start, pagination.end).map((pokemon) => {
+                    pokemons?.slice(pagination?.start, pagination?.end)?.map((pokemon) => {
                         return (
                             <PokemonCard pokemon={pokemon} key={pokemon.id} />
                         )
