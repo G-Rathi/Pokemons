@@ -24,10 +24,18 @@ const Home = () => {
 
 export default Home
 
+const Loader=()=>{
+    return(
+        <div style={{width:"55rem",height:"30rem", display:"flex",alignItems:"center",justifyContent:"center"}}>
+        <h1 style={{color:"white"}}>Loading...</h1>
+        </div>
+    )
+}
 
 
 export const AllPokemons = () => {
     const [pokemons, setPokemons] = useState([])
+    const [loading,setLoading]=useState(true);
     const [showPerPage, setShowPerPage] = useState(12)
     const [pagination, setPagination] = useState({ start: 0, end: showPerPage })
 
@@ -37,6 +45,7 @@ export const AllPokemons = () => {
             const pokemonsData = await response.data.data
 
             setPokemons(pokemonsData)
+            setLoading(false)
         }
         catch (error) {
             console.log(error.message)
@@ -56,7 +65,7 @@ export const AllPokemons = () => {
     return (
         <Fragment>
             <div className='allPokemonContainer'>
-                {
+                {loading?<Loader />:
                     pokemons.slice(pagination.start, pagination.end).map((pokemon) => {
                         return (
                             <PokemonCard pokemon={pokemon} key={pokemon.id} />
